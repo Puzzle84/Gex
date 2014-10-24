@@ -3,7 +3,7 @@
 
 #include <gex_platform.h>
 
-class Game
+class GEX_API Game
 {
 public:
 	Game();

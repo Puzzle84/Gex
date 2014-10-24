@@ -17,17 +17,17 @@
 	#endif
 
 #elif defined(__LINUX__)
-#define GEX_SYS_LINUX
+	#define GEX_SYS_LINUX
 #elif defined (__APPLE__)
-#define GEX_SYS_MACOS
+	#define GEX_SYS_MACOS
 #endif
 
 #ifndef GEX_STATIC_BUILD
 	#ifdef GEX_SYS_WINDOWS
 		#ifdef GEX_NONCLIENT_BUILD
-			#define GEX_API __dclspec(dllexport)
+			#define GEX_API __declspec(dllexport)
 		#else
-			#define GEX_API __dclspec(dllimport)
+			#define GEX_API __declspec(dllimport)
 		#endif
 
 		// Visual C++ compiler warning C4251 disable
